@@ -4,14 +4,13 @@ import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { CustomResponse } from '../interface/custom-response';
 import { Server } from '../interface/server';
-import { error } from 'console';
 import { Status } from '../enum/status.enum';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServerService {
-  private readonly apiUrl = 'any';
+  private readonly apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {}
 
